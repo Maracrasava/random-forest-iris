@@ -8,7 +8,7 @@ data = pd.read_csv("iris.data")
 
 X = np.array(data.drop("class", 1))
 y = np.array(data["class"])
-z = ["sepal_length", "sepal_width", "petal_length", "petal_width"]
+z = np.array(["sepal_length", "sepal_width", "petal_length", "petal_width"])
 X_train, X_test, y_train, y_test = sklearn.model_selection.train_test_split(X, y, test_size=0.1)
 
 
@@ -36,4 +36,5 @@ for x in range(len(prediction)):
 # Feature importance
 
 feat_importances = pd.Series(model.feature_importances_, index=z)
-feat_importances.plot(kind='barh')
+print(feat_importances)
+
