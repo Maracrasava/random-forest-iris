@@ -13,6 +13,7 @@ X_train, X_test, y_train, y_test = sklearn.model_selection.train_test_split(X, y
 
 
 """
+Use it for training
 best = 0
 for _ in range(30):
     X_train, X_test, y_train, y_test = sklearn.model_selection.train_test_split(X, y, test_size=0.1)
